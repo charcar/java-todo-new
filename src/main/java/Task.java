@@ -40,10 +40,14 @@ public class Task {
 
   public static Task find(int id) {
     try {
-      return instances.get(id-1);
+      return instances.get(id - 1);
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
+  }
+
+  public static void clear() {
+    instances.clear();
   }
 
 }
